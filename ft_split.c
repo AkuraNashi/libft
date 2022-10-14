@@ -11,17 +11,22 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_count(char const *str, char delim)
 {
 	int	count;
+	int	i;
 
+	i = 0;
 	count = 1;
-	//TODO : si string "echo-" compte comme 2 au lieu de 1
-	while (*str++)
+	while (str[i])
 	{
-		if (*str == delim)
+		printf("Lettre : %c\n", str[i]);
+		printf("i : %d\n\n", i);
+		if (str[i] != delim && str[i + 1] == delim && !str[i + 1])
 			count++;
+		i++;
 	}
 	return (count);
 }
@@ -32,14 +37,13 @@ char	**ft_split(char const *str, char splitter)
 	int		count;
 
 	count = ft_count(str, splitter);
-	printf("%d", count);
+	printf("\n%d", count);
 	return (result);
 }
 
 int	main(void)
 {
-	char *s = "test-de-mon-split";
+	char *s = "test--";
 	char **c = ft_split(s, '-');
-  
 	//printf("%s\n", c);
 }
