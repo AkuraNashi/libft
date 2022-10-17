@@ -6,7 +6,7 @@
 #    By: lcamilo- <lcamilo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 16:47:09 by lcamilo-          #+#    #+#              #
-#    Updated: 2022/10/17 11:01:19 by lcamilo-         ###   ########.fr        #
+#    Updated: 2022/10/17 11:21:06 by lcamilo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRCS	= ft_isalpha.c   	\
 		  ft_strjoin.c   	\
 		  ft_strtrim.c   	\
 		  ft_split.c	 	\
+		  ft_itoa.c			\
 		  ft_strmapi.c		\
 		  ft_putchar_fd.c	\
 		  ft_putendl_fd.c	\
