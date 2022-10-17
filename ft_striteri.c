@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcamilo- <lcamilo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 23:37:34 by lcamilo-          #+#    #+#             */
-/*   Updated: 2022/10/17 19:47:27 by lcamilo-         ###   ########.fr       */
+/*   Created: 2022/10/17 17:56:04 by lcamilo-          #+#    #+#             */
+/*   Updated: 2022/10/17 19:46:36 by lcamilo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-
-static void	putnbr(unsigned int n, int fd)
+void	ft_striteri(char *s, void (*fct)(unsigned int, char*))
 {
-	unsigned int	nb;
+	int	i;
 
-	nb = n;
-	if (n > 9)
-		putnbr(n / 10, fd);
-	ft_putchar_fd(nb % 10 + '0', fd);
-}
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	int	negative;
-
-	negative = 1;
-	if (n < 0)
+	if (s && fct)
 	{
-		ft_putchar_fd('-', fd);
-		negative *= -1;
+		i = 0;
+		while (s[i])
+		{
+			fct(i, &s[i]);
+			i++;
+		}
 	}
-	putnbr(n * negative, fd);
 }

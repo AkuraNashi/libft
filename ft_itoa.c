@@ -6,14 +6,14 @@
 /*   By: lcamilo- <lcamilo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 20:20:35 by lcamilo-          #+#    #+#             */
-/*   Updated: 2022/10/17 15:28:23 by lcamilo-         ###   ########.fr       */
+/*   Updated: 2022/10/17 19:49:06 by lcamilo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-void	putnbr(char *s, unsigned int i, unsigned int n)
+static void	putnbr(char *s, unsigned int i, unsigned int n)
 {
 	unsigned int	nb;
 
@@ -30,7 +30,6 @@ int	count_char(unsigned int n, int negative)
 	count = 1;
 	if (negative < 0)
 		count++;
-	printf("%d", n);
 	while (n > 9)
 	{
 		n /= 10;
@@ -60,9 +59,4 @@ char	*ft_itoa(int n)
 	else
 		putnbr(c, i - 1, n);
 	return (c);
-}
-
-int main(void)
-{
-	ft_itoa(-2147483648);
 }
