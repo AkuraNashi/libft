@@ -6,7 +6,7 @@
 /*   By: lcamilo- <lcamilo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 16:14:59 by lcamilo-          #+#    #+#             */
-/*   Updated: 2022/10/12 13:39:19 by lcamilo-         ###   ########.fr       */
+/*   Updated: 2022/10/17 11:04:17 by lcamilo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <string.h>
+# include <unistd.h>
 
 //Partie 1
 int		ft_isalpha(int c);
@@ -44,13 +44,13 @@ char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-//char	**ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c);
 //char	*ft_itoa(int n);
-//char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 //void	ft_striteri(char *s, void (*f)(unsigned int, char *));
-//void	ft_putchar_fd(char c, int fd);
-//void	ft_putstr_fd(char *s, int fd);
-//void	ft_putendl_fd(char *s, int fd);
-//void	ft_putnbr_fd(int n, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 //Partie Bonus
 #endif  

@@ -13,18 +13,16 @@
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_count(char const *str, char delim)
+static int	ft_count(char const *str, char delim)
 {
 	int	count;
 	int	i;
 
 	i = 0;
-	count = 1;
+	count = 0;
 	while (str[i])
-	{
-		printf("Lettre : %c\n", str[i]);
-		printf("i : %d\n\n", i);
-		if (str[i] != delim && str[i + 1] == delim && !str[i + 1])
+	{	
+		if (str[i] != delim && (str[i + 1] == delim || !str[i + 1]))
 			count++;
 		i++;
 	}
@@ -34,16 +32,27 @@ int	ft_count(char const *str, char delim)
 char	**ft_split(char const *str, char splitter)
 {
 	char	**result;
-	int		count;
+	int		j;
+	int		i_result;
 
-	count = ft_count(str, splitter);
-	printf("\n%d", count);
+	if (!str)
+		return (0);
+	result = malloc ((ft_count(str, splitter) + 1) * sizeof(char *));
+	if (!result)
+		return (0);
+	i_result = 0;
+	while (*str)
+	{
+		while (*str == splitter)
+			str++;
+		if (!*str)
+			break ;
+		j = 0;
+		while (str[j] && str[j] != splitter)
+			j++;
+		result[i_result++] = ft_substr(str, 0, j);
+		str += j;
+	}
+	result[i_result] = NULL;
 	return (result);
-}
-
-int	main(void)
-{
-	char *s = "test--";
-	char **c = ft_split(s, '-');
-	//printf("%s\n", c);
 }

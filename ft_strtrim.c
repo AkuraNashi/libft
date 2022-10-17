@@ -6,7 +6,7 @@
 /*   By: lcamilo- <lcamilo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 01:20:44 by lcamilo-          #+#    #+#             */
-/*   Updated: 2022/10/14 14:47:54 by lcamilo-         ###   ########.fr       */
+/*   Updated: 2022/10/17 11:02:35 by lcamilo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (s1[len] && ft_strchr(set, s1[len]))
 		len++;
 	if (!s1[len])
-		return (strdup(""));
+		return (ft_strdup(""));
 	start = len;
 	while (s1[len])
 		len++;
