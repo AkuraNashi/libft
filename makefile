@@ -6,7 +6,7 @@
 #    By: lcamilo- <lcamilo-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/11 16:47:09 by lcamilo-          #+#    #+#              #
-#    Updated: 2022/10/18 14:09:50 by lcamilo-         ###   ########.fr        #
+#    Updated: 2022/10/18 23:07:23 by lcamilo-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,8 @@ SRCS_B	= ft_lstnew_bonus.c		  	\
 		  ft_lstadd_front_bonus.c	\
 		  ft_lstsize_bonus.c		\
 		  ft_lstlast_bonus.c		\
-		  ft_lstadd_back_bonus.c	
+		  ft_lstadd_back_bonus.c	\
+		  ft_lstdelone_bonus.c
 		
 OBJS	= ${SRCS:.c=.o}
 

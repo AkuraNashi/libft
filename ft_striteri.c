@@ -6,7 +6,7 @@
 /*   By: lcamilo- <lcamilo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 17:56:04 by lcamilo-          #+#    #+#             */
-/*   Updated: 2022/10/17 19:46:36 by lcamilo-         ###   ########.fr       */
+/*   Updated: 2022/10/18 22:48:11 by lcamilo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*fct)(unsigned int, char*))
 		i = 0;
 		while (s[i])
 		{
-			fct(i, &s[i]);
+			fct(i, s + i);
 			i++;
 		}
 	}
