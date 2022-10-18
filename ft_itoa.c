@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcamilo- <lcamilo-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lcamilo- <lcamilo-@42lausanne.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 20:20:35 by lcamilo-          #+#    #+#             */
-/*   Updated: 2022/10/17 19:49:06 by lcamilo-         ###   ########.fr       */
+/*   Updated: 2022/10/18 16:27:46 by lcamilo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	putnbr(char *s, unsigned int i, unsigned int n)
 	nb = n;
 	if (n > 9)
 		putnbr(s, i - 1, n / 10);
-	s[i] = n % 10 + '0';
+	s[i] = nb % 10 + '0';
 }
 
 int	count_char(unsigned int n, int negative)
